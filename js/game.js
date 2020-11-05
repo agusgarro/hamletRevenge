@@ -3,7 +3,7 @@ class Game {
     constructor() {}
     preloadGame() {
       console.log("this is the game preload");
-      this.backgroundImage = loadImage("assets/images.jpeg") 
+      //this.backgroundImage = loadImage("assets/images.jpeg") 
     
       this.playerImage = loadImage("assets/mrhamlet.gif");
       this.calaveraImage = loadImage("assets/calavera.png");
