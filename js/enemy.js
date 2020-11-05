@@ -12,11 +12,11 @@ constructor (enemyImage) {
 collision(enemyInfo) {
       
     let enemyX = this.x + this.width / 2;
-    let enemyY = this.y + this.height / 3;
+    let enemyY = this.y + this.height / 2;
     let playerX = enemyInfo.x + enemyInfo.width / 2 ;
-    let playerY = enemyInfo.y + enemyInfo.height / 3 ;
+    let playerY = enemyInfo.y + enemyInfo.height / 2 ;
 
-    if (dist(enemyX, enemyY, playerX, playerY) > 5) {
+    if (dist(enemyX, enemyY, playerX, playerY) > 40) {
      
       return false;
     } else {
@@ -28,7 +28,7 @@ collision(enemyInfo) {
 
 
 drawEnemy () {
-    this.x-=4;
+    this.x-=5;
     this.collision(game.player);
     //console.log (game);
     image(this.image, this.x, this.y, this.height, this.width);
