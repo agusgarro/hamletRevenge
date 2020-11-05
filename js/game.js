@@ -34,7 +34,7 @@ class Game {
        
         //this.enemy.drawEnemy();
         this.player.drawPlayer();
-        if (frameCount % 200 === 0) {
+        if (frameCount % 120 === 0) {
          console.log ("this enemies");
          this.enemies.push (new Enemy (this.claudioImage));
         }
