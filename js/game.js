@@ -3,13 +3,13 @@ class Game {
     constructor() {}
     preloadGame() {
       console.log("this is the game preload");
-      this.backgroundImage = loadImage("../assets/images.jpeg") 
+      this.backgroundImage = loadImage("assets/images.jpeg") 
     
-      this.playerImage = loadImage("../assets/mrhamlet.gif");
-      this.calaveraImage = loadImage("../assets/calavera.png");
-      this.claudioImage = loadImage("../assets/claudio.png");
-      this.loseImage = loadImage ("../assets/claudiuswin1.jpg");
-      this.surviveImage = loadImage ("../assets/survive.jpg");
+      this.playerImage = loadImage("assets/mrhamlet.gif");
+      this.calaveraImage = loadImage("assets/calavera.png");
+      this.claudioImage = loadImage("assets/claudio.png");
+      this.loseImage = loadImage ("assets/claudiuswin1.jpg");
+      this.surviveImage = loadImage ("assets/survive.jpg");
     }
     setupGame() {
         console.log("this is the game setup");
