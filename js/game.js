@@ -3,13 +3,13 @@ class Game {
     constructor() {}
     preloadGame() {
       console.log("this is the game preload");
-      this.backgroundImage = loadImage("../assets/images.jpeg") 
+      //this.backgroundImage = loadImage("assets/images.jpeg") 
     
-      this.playerImage = loadImage("../assets/mrhamlet.gif");
-      this.calaveraImage = loadImage("../assets/calavera.png");
-      this.claudioImage = loadImage("../assets/claudio.png");
-      this.loseImage = loadImage ("../assets/claudiuswin1.jpg");
-      this.surviveImage = loadImage ("../assets/survive.jpg");
+      this.playerImage = loadImage("assets/mrhamlet.gif");
+      this.calaveraImage = loadImage("assets/calavera.png");
+      this.claudioImage = loadImage("assets/claudio.png");
+      this.loseImage = loadImage ("assets/claudiuswin1.jpg");
+      this.surviveImage = loadImage ("assets/survive.jpg");
     }
     setupGame() {
         console.log("this is the game setup");
@@ -26,7 +26,7 @@ class Game {
           image(this.loseImage, 0, 0, width, height);
           frameRate (0);
         }
-        if (game.player.score === 10) {
+        if (game.player.score === 20) {
           console.log ("you got a life");
           image(this.surviveImage,0, 0, width, height);
           frameRate(0);
@@ -34,7 +34,7 @@ class Game {
        
         //this.enemy.drawEnemy();
         this.player.drawPlayer();
-        if (frameCount % 360 === 0) {
+        if (frameCount % 120 === 0) {
          console.log ("this enemies");
          this.enemies.push (new Enemy (this.claudioImage));
         }
@@ -42,12 +42,12 @@ class Game {
           enemy.drawEnemy();
         });
         this.enemies = this.enemies.filter((enemy) => {
-          if (enemy.collision(this.player) || enemy.x < 0) {
+          if (enemy.collision(this.player)) {
             game.player.lives -= 1;
             console.log (game.player.lives);
             return false;
           } else {
-    
+            
             return true;
           }
         

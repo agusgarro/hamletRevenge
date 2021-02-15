@@ -8,7 +8,7 @@ const game = new Game ();
 function preload () {
   const options = {probabilityThreshold: 0.95 };
   soundClassifier = ml5.soundClassifier ('SpeechCommands18w', options)
-  bg = loadImage ('../assets/16a6a8f5da3eeaec86fa92f4765b26aa.jpg');
+  bg = loadImage ('assets/16a6a8f5da3eeaec86fa92f4765b26aa.jpg');
 game.preloadGame();
 }
 
